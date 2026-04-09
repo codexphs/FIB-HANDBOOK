@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBI — Handbook</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/handbook.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-logo">NBI <span>/ HANDBOOK PORTAL</span></div>
+    <div class="topbar-right">
+      <div class="user-badge">Agent: <strong id="current-user"></strong></div>
+      <button class="btn-logout" onclick="doLogout()">LOGOUT</button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-label">Overview</div>
+        <a class="sidebar-item active" href="handbook.html#home" onclick="showSection('home',this)"><span class="num">00</span> Home</a>
+        <a class="sidebar-item" href="handbook.html#mission" onclick="showSection('mission',this)"><span class="num">01</span> Mission & Values</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Organization</div>
+        <a class="sidebar-item" href="handbook.html#ranks" onclick="showSection('ranks',this)"><span class="num">02</span> Rank Hierarchy</a>
+        <a class="sidebar-item" href="handbook.html#divisions" onclick="showSection('divisions',this)"><span class="num">03</span> Divisions</a>
+        <a class="sidebar-item" href="handbook.html#career" onclick="showSection('career',this)"><span class="num">04</span> Career & Hiring</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Operations</div>
+        <a class="sidebar-item" href="handbook.html#force" onclick="showSection('force',this)"><span class="num">05</span> Force Matrix</a>
+        <a class="sidebar-item" href="handbook.html#vforce" onclick="showSection('vforce',this)"><span class="num">06</span> Vehicle Force Matrix</a>
+        <a class="sidebar-item" href="handbook.html#undercover" onclick="showSection('undercover',this)"><span class="num">07</span> Undercover Ops</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Reference</div>
+        <a class="sidebar-item" href="handbook.html#miranda" onclick="showSection('miranda',this)"><span class="num">08</span> Miranda Rights</a>
+        <a class="sidebar-item" href="handbook.html#radio" onclick="showSection('radio',this)"><span class="num">09</span> Radio Codes</a>
+        <a class="sidebar-item" href="handbook.html#equipment" onclick="showSection('equipment',this)"><span class="num">10</span> Equipment & Vehicles</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">System</div>
+        <a class="sidebar-item" href="handbook.html#registry" onclick="showSection('registry',this)"><span class="num">11</span> Agent Registry</a>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- HOME -->
+      <section class="sec active" id="sec-home">
+        <div class="hero">
+          <div class="hero-badge">Official Document</div>
+          <h1>NATIONAL<br><span>BUREAU</span></h1>
+          <div class="hero-sub">of Investigation — Agent Handbook</div>
+          <p class="prose">This handbook contains official procedures, protocols, and regulations governing all NBI personnel. All agents are required to read and adhere to the contents of this document. Unauthorized disclosure of this material is strictly prohibited.</p>
+          <div class="hero-stats">
+            <div class="stat"><div class="stat-num">9</div><div class="stat-label">Rank Levels</div></div>
+            <div class="stat"><div class="stat-num">5</div><div class="stat-label">Divisions</div></div>
+            <div class="stat"><div class="stat-num">5</div><div class="stat-label">Force Levels</div></div>
+            <div class="stat"><div class="stat-num">3</div><div class="stat-label">Training Phases</div></div>
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card" onclick="showSection('ranks',null)">
+            <div class="card-tag">Section 02</div><h3>Rank Hierarchy</h3>
+            <p>From Intern to Director — understand every rank, its responsibilities, and access permissions.</p>
+          </div>
+          <div class="card" onclick="showSection('divisions',null)">
+            <div class="card-tag">Section 03</div><h3>NBI Divisions</h3>
+            <p>Major Crimes, Criminal Investigation, Internal Affairs, CIRG, and the National Academy.</p>
+          </div>
+          <div class="card" onclick="showSection('force',null)">
+            <div class="card-tag">Section 05</div><h3>Force Matrix</h3>
+            <p>Step-by-step escalation guide covering all five force levels with required actions.</p>
+          </div>
+          <div class="card" onclick="showSection('radio',null)">
+            <div class="card-tag">Section 09</div><h3>Radio Codes</h3>
+            <p>Complete ten-codes, eleven-codes, and status codes for field communication.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION -->
+      <section class="sec" id="sec-mission">
+        <div class="sec-header"><div class="sec-num">01</div><div class="sec-title-block"><h2>Mission & Core Values</h2><p>The foundation of the NBI</p></div></div>
+        <div class="info-box"><h4>Mission Statement</h4><p>The NBI is committed to ensuring public safety and enforcing laws through effective investigation, intelligence gathering, and collaborative partnerships with other law enforcement agencies.</p></div>
+        <div class="info-box"><h4>Vision Statement</h4><p>To be a premier investigative agency that upholds the rule of law, ensuring safety and justice for all citizens of San Andreas.</p></div>
+        <div class="values-grid">
+          <div class="value-card"><div class="value-icon">⚖️</div><div class="value-name">Integrity</div><p>Commitment to ethical practices and transparency in all operations and conduct.</p></div>
+          <div class="value-card"><div class="value-icon">🛡️</div><div class="value-name">Bravery</div><p>The courage to confront danger and adversity in service of the community.</p></div>
+          <div class="value-card"><div class="value-icon">🎯</div><div class="value-name">Commitment</div><p>Unwavering dedication to justice and professional excellence in every case.</p></div>
+        </div>
+        <div class="info-box"><h4>Overview</h4><p>The National Bureau of Investigation is a key federal agency dedicated to enforcing national laws and maintaining public safety. It focuses on major investigations, counterterrorism, and providing support to other law enforcement bodies. The NBI is committed to protecting national security and upholding justice across all divisions.</p></div>
+      </section>
+
+      <!-- RANKS -->
+      <section class="sec" id="sec-ranks">
+        <div class="sec-header"><div class="sec-num">02</div><div class="sec-title-block"><h2>Rank Hierarchy</h2><p>NBI organizational structure</p></div></div>
+        <div id="rank-list"></div>
+      </section>
+
+      <!-- DIVISIONS -->
+      <section class="sec" id="sec-divisions">
+        <div class="sec-header"><div class="sec-num">03</div><div class="sec-title-block"><h2>NBI Divisions</h2><p>Organizational structure & duties</p></div></div>
+        <div class="card-grid" id="divisions-grid"></div>
+      </section>
+
+      <!-- CAREER -->
+      <section class="sec" id="sec-career">
+        <div class="sec-header"><div class="sec-num">04</div><div class="sec-title-block"><h2>Career & Hiring</h2><p>Recruitment, training & advancement</p></div></div>
+        <div class="info-box"><h4>Career Path</h4><p>To join the NBI, candidates must begin as an Intern and complete the NBI National Academy Training Course — a demanding 7-day program. The NBI conducts thorough background checks throughout the hiring process and ongoing employment.</p></div>
+        <div class="info-box"><h4>Hiring Procedure</h4><p>Interested candidates must meet all outlined requirements to apply. Submissions are reviewed for completeness and eligibility, followed by background checks and interviews. Successful candidates will be invited to the National Academy. If any step is failed, re-application is possible after 7 days.</p></div>
+        <div class="info-box"><h4>Training Phases</h4><p><strong>Phase 1:</strong> Force Matrix (FM1–5)<br><strong>Phase 2:</strong> Vehicle Force Matrix (VFM1–5)<br><strong>Phase 3:</strong> Arresting Procedure — Miranda rights and custody processing.</p></div>
+        <div class="info-box"><h4>Promotion & Demotion</h4><p>To be promoted: show respect, salute high-ranking officers, and cooperate with NBI activities such as weekly inspections and NBI operations. Promotion and demotion letters are issued by the Executive Assistant Director and approved by the Director.</p></div>
+        <div class="info-box"><h4>Transfer Letters</h4><p>To transfer divisions, candidates must be ranked 4 in PNP-CIDG or AFP-MA, or ranked 3 in the Philippine Government. All documents must be accurately recorded to be valid.</p></div>
+      </section>
+
+      <!-- FORCE MATRIX -->
+      <section class="sec" id="sec-force">
+        <div class="sec-header"><div class="sec-num">05</div><div class="sec-title-block"><h2>Force Matrix</h2><p>Escalation of force protocol</p></div></div>
+        <p class="prose"><strong>Definition:</strong> The Force Matrix defines the amount of force used upon a suspect who is being arrested or detained. All agents must follow the matrix strictly and escalate only as required by the situation.</p>
+        <div id="force-list"></div>
+      </section>
+
+      <!-- VEHICLE FORCE -->
+      <section class="sec" id="sec-vforce">
+        <div class="sec-header"><div class="sec-num">06</div><div class="sec-title-block"><h2>Vehicle Force Matrix</h2><p>Traffic stops, pursuits & PIT</p></div></div>
+        <p class="prose">Used in conjunction with <strong>10-26</strong>, <strong>10-26a</strong>, and <strong>10-80</strong> radio codes.</p>
+        <div id="vforce-list"></div>
+      </section>
+
+      <!-- UNDERCOVER -->
+      <section class="sec" id="sec-undercover">
+        <div class="sec-header"><div class="sec-num">07</div><div class="sec-title-block"><h2>Undercover Operations</h2><p>Identity, secrecy & field protocols</p></div></div>
+        <div class="info-box"><h4>Overview</h4><p>Going undercover is a vital part of the NBI and requires extensive knowledge, secrecy, and skill. Undercover work involves changing one's identity, creating fake passports and licenses.</p></div>
+        <div class="info-box"><h4>Identity & Documents</h4><p>Every Agent may collect a fake passport from the Mall at no extra cost. New phones may be required for deep undercover operations and can be purchased at any 24/7 store. Access to the Secret Vehicle Garage is available to Agent rank and above.</p></div>
+        <div class="info-box"><h4>Permitted Firearms While Undercover</h4><p>Agents must not carry an excessive number of firearms that civilians would not have. Advised firearms: <strong>Desert Eagle</strong>, <strong>Remington 870 Pump Action Shotgun</strong>, and <strong>MP5 if needed</strong>. Do not carry heavy weapons visibly during operations.</p></div>
+      </section>
+
+      <!-- MIRANDA -->
+      <section class="sec" id="sec-miranda">
+        <div class="sec-header"><div class="sec-num">08</div><div class="sec-title-block"><h2>Miranda Rights</h2><p>Required reading at time of arrest</p></div></div>
+        <div class="miranda-box">"You have the right to remain silent. Anything you say can be used against you in a court of law. You have the right to an attorney. If you cannot afford an attorney, one will be provided for you. Do you understand these rights as they have been read to you?"</div>
+        <div class="info-box"><h4>When to Read Miranda</h4><p>Miranda Rights must be read to any suspect at the time of their arrest and before any interrogation begins. Failure to read Miranda Rights may result in statements being inadmissible as evidence in court. All agents are required to memorize this statement verbatim.</p></div>
+      </section>
+
+      <!-- RADIO CODES -->
+      <section class="sec" id="sec-radio">
+        <div class="sec-header"><div class="sec-num">09</div><div class="sec-title-block"><h2>Radio Codes</h2><p>Standard communication codes</p></div></div>
+        <div class="code-section"><div class="code-title">TEN CODES</div><table class="data-table"><thead><tr><th>Code</th><th>Meaning</th></tr></thead><tbody id="ten-tbody"></tbody></table></div>
+        <div class="code-section"><div class="code-title">ELEVEN CODES</div><table class="data-table"><thead><tr><th>Code</th><th>Meaning</th></tr></thead><tbody id="eleven-tbody"></tbody></table></div>
+        <div class="code-section"><div class="code-title">STATUS CODES</div><table class="data-table"><thead><tr><th>Code</th><th>Meaning</th></tr></thead><tbody id="status-tbody"></tbody></table></div>
+      </section>
+
+      <!-- EQUIPMENT -->
+      <section class="sec" id="sec-equipment">
+        <div class="sec-header"><div class="sec-num">10</div><div class="sec-title-block"><h2>Equipment & Vehicles</h2><p>Standard issue gear and bureau vehicles</p></div></div>
+        <div class="divider" data-label="Standard Issue Weapons"></div>
+        <div class="equip-grid" id="weapons-grid"></div>
+        <div class="divider" data-label="Bureau Vehicles"></div>
+        <div class="equip-grid" id="vehicles-grid"></div>
+      </section>
+
+      <!-- REGISTRY -->
+      <section class="sec" id="sec-registry">
+        <div class="sec-header"><div class="sec-num">11</div><div class="sec-title-block"><h2>Agent Registry</h2><p>Registered personnel database</p></div></div>
+        <div class="registry-controls">
+          <button class="btn-sm" onclick="renderRegistry()">↻ Refresh</button>
+          <button class="btn-sm danger" onclick="clearAgents()">✕ Clear All</button>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>#</th><th>Discord</th><th>In-Game Name</th><th>Status</th><th>Registered</th></tr></thead>
+            <tbody id="registry-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../js/db.js"></script>
+  <script src="../js/handbook.js"></script>
+</body>
+</html>

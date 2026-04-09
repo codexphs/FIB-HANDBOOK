@@ -1,0 +1,161 @@
+/* =============================================
+   HANDBOOK.CSS — Dashboard layout styles
+   ============================================= */
+
+/* ---- Topbar ---- */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: 54px;
+  background: var(--dark2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+.topbar-logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: var(--gold);
+}
+.topbar-logo span {
+  color: var(--text-dim);
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.user-badge strong { color: var(--gold); }
+
+.btn-logout {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 5px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.btn-logout:hover { border-color: var(--red); color: var(--red); }
+
+/* ---- Layout ---- */
+.layout {
+  display: flex;
+  padding-top: 54px;
+  min-height: 100vh;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  width: 256px;
+  background: var(--dark2);
+  border-right: 1px solid var(--border);
+  position: fixed;
+  top: 54px; bottom: 0;
+  overflow-y: auto;
+  padding: 16px 0 32px;
+  flex-shrink: 0;
+}
+
+.sidebar-section { margin-bottom: 4px; }
+
+.sidebar-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 12px 20px 6px;
+  opacity: 0.6;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-dim);
+  border-left: 2px solid transparent;
+  transition: all 0.15s;
+  font-family: var(--font-mono);
+}
+.sidebar-item:hover { background: var(--dark3); color: var(--text); }
+.sidebar-item.active {
+  border-left-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.05);
+}
+.sidebar-item .num {
+  font-size: 9px;
+  color: var(--text-dim);
+  min-width: 22px;
+  opacity: 0.6;
+}
+.sidebar-item.active .num { opacity: 1; color: var(--gold-dim); }
+
+/* ---- Content area ---- */
+.content {
+  margin-left: 256px;
+  flex: 1;
+  padding: 40px 48px 60px;
+  max-width: 980px;
+}
+
+/* ---- Sections ---- */
+.sec { display: none; }
+.sec.active { display: block; animation: secIn 0.2s ease; }
+
+@keyframes secIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Registry controls ---- */
+.registry-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.table-wrap { overflow-x: auto; }
+
+/* ---- Force colors by index ---- */
+.force-item:nth-child(1) .force-num { color: #3498db; }
+.force-item:nth-child(1) .force-level-tag { color: #3498db; }
+.force-item:nth-child(2) .force-num { color: #2ecc71; }
+.force-item:nth-child(2) .force-level-tag { color: #2ecc71; }
+.force-item:nth-child(3) .force-num { color: var(--orange); }
+.force-item:nth-child(3) .force-level-tag { color: var(--orange); }
+.force-item:nth-child(4) .force-num { color: #e74c3c; }
+.force-item:nth-child(4) .force-level-tag { color: #e74c3c; }
+.force-item:nth-child(5) .force-num { color: var(--red); }
+.force-item:nth-child(5) .force-level-tag { color: var(--red); }
+
+@media (max-width: 900px) {
+  .sidebar { width: 220px; }
+  .content { margin-left: 220px; padding: 24px 24px 48px; }
+}
+
+@media (max-width: 640px) {
+  .sidebar { display: none; }
+  .content { margin-left: 0; padding: 16px; }
+  .topbar { padding: 0 16px; }
+}

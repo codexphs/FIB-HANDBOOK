@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBI — Agent Portal</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="classified-tag">Restricted Access</div>
+
+      <div class="auth-logo">
+        <div class="seal">NBI</div>
+        <h1>NBI PORTAL</h1>
+        <p>National Bureau of Investigation</p>
+      </div>
+
+      <div class="auth-tabs">
+        <div class="auth-tab active" id="tab-login" onclick="switchTab('login')">SIGN IN</div>
+        <div class="auth-tab" id="tab-register" onclick="switchTab('register')">REGISTER</div>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form class="auth-form active" id="form-login" onsubmit="return false">
+        <div class="form-group">
+          <label>Discord Name / ID</label>
+          <input type="text" id="login-discord" placeholder="e.g. agent#1234" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-pass" placeholder="••••••••" />
+        </div>
+        <button class="btn-primary" onclick="doLogin()">ACCESS SYSTEM</button>
+        <div class="auth-msg" id="login-msg"></div>
+        <div class="auth-hint">Default admin — Discord: <strong>director</strong> / Pass: <strong>nbi1234</strong></div>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form class="auth-form" id="form-register" onsubmit="return false">
+        <div class="form-group">
+          <label>Discord Name or ID</label>
+          <input type="text" id="reg-discord" placeholder="e.g. YourName#0001 or 123456789" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label>In-Game Name</label>
+          <input type="text" id="reg-ingame" placeholder="e.g. Juan dela Cruz" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="reg-pass" placeholder="Min. 6 characters" />
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" id="reg-pass2" placeholder="Re-enter password" />
+        </div>
+        <button class="btn-primary" onclick="doRegister()">SUBMIT APPLICATION</button>
+        <div class="auth-msg" id="reg-msg"></div>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
